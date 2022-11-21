@@ -17,7 +17,7 @@ public class So2Index {
     }
     @Override
     public String toString() {
-        return "So2Index {id = " + id + ", indexLevelName = " + indexLevelName + "}";
+        return "{\n\t\tid : " + id + ", \n\t\tindexLevelName : " + indexLevelName + "\n\t}";
     }
     
     

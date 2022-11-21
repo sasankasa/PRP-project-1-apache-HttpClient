@@ -17,7 +17,7 @@ public class Pm10Index {
     }
     @Override
     public String toString() {
-        return "Pm10Index {id = " + id + ", indexLevelName = " + indexLevelName + "}";
+        return "{\n\t\tid : " + id + ", \n\t\tindexLevelName : " + indexLevelName + "\n\t}";
     }
      
 }

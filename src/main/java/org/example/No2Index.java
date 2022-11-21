@@ -19,7 +19,7 @@ public class No2Index {
 
     @Override
     public String toString() {
-        return "No2Index {id = " + id + ", indexLevelName = " + indexLevelName + "}";
+        return "{\n\t\tid : " + id + ", \n\t\tindexLevelName : " + indexLevelName + "\n\t}";
     }
 
 }

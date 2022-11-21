@@ -17,7 +17,7 @@ public class O3Index {
     }
     @Override
     public String toString() {
-        return "O3Index {id = " + id + ", indexLevelName = " + indexLevelName + "}";
+        return "{\n\t\tid : " + id + ", \n\t\tindexLevelName : " + indexLevelName + "\n\t}";
     }
       
 }

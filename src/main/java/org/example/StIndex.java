@@ -17,7 +17,7 @@ public class StIndex {
     }
     @Override
     public String toString() {
-        return "StIndex {id = " + id + ", indexLevelName = " + indexLevelName + "}";
+        return "{\n\t\tid : " + id + ", \n\t\tindexLevelName : " + indexLevelName + "\n\t\t}";
     }
         
 }

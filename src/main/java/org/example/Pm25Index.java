@@ -17,7 +17,7 @@ public class Pm25Index {
     }
     @Override
     public String toString() {
-        return "Pm25Index {id = " + id + ", indexLevelName = " + indexLevelName + "}";
+        return "{\n\t\tid : " + id + ", \n\t\tindexLevelName : " + indexLevelName + "\n\t}";
     }
     
 }

@@ -2,7 +2,7 @@ package org.example;
 
 public class SpecificStation {
     private int id;
-    private String stCalcDate;
+    String stCalcDate;
     private StIndex stIndexLevel;
     private String stSourceDataDate;
     private String so2CalcDate;
@@ -22,7 +22,7 @@ public class SpecificStation {
     private String o3SourceDataDate;
     private String stIndexStatus;
     private String stIndexCrParam;
-
+    
     public int getId() {
         return id;
     }
@@ -65,11 +65,11 @@ public class SpecificStation {
     public void setSo2SourceDataDate(String so2SourceDataDate) {
         this.so2SourceDataDate = so2SourceDataDate;
     }
-    public String getNo2CalDate() {
+    public String getNo2CalcDate() {
         return no2CalcDate;
     }
-    public void setNo2CalDate(String no2CalDate) {
-        this.no2CalcDate = no2CalDate;
+    public void setNo2CalcDate(String no2CalcDate) {
+        this.no2CalcDate = no2CalcDate;
     }
     public No2Index getNo2IndexLevel() {
         return no2IndexLevel;
@@ -83,10 +83,10 @@ public class SpecificStation {
     public void setNo2SourceDataDate(String no2SourceDataDate) {
         this.no2SourceDataDate = no2SourceDataDate;
     }
-    public String getPm10CalDate() {
+    public String getPm10CalcDate() {
         return pm10CalcDate;
     }
-    public void setPm10CalDate(String pm10CalcDate) {
+    public void setPm10CalcDate(String pm10CalcDate) {
         this.pm10CalcDate = pm10CalcDate;
     }
     public Pm10Index getPm10IndexLevel() {
@@ -151,15 +151,17 @@ public class SpecificStation {
     }
     @Override
     public String toString() {
-        return "SpecificStation {id = " + id + ", stCalcDate = " + stCalcDate + ", stIndexLevel = " + stIndexLevel
-                + ", stSourceDataDate = " + stSourceDataDate + ", so2CalcDate = " + so2CalcDate + ", so2IndexLevel = "
-                + so2IndexLevel + ", so2SourceDataDate = " + so2SourceDataDate + ", no2CalDate = " + no2CalcDate
-                + ", no2IndexLevel = " + no2IndexLevel + ", no2SourceDataDate = " + no2SourceDataDate + ", pm10CalcDate = "
-                + pm10CalcDate + ", pm10IndexLevel = " + pm10IndexLevel + ", pm10SourceDataDate = " + pm10SourceDataDate
-                + ", pm25CalcDate = " + pm25CalcDate + ", pm25IndexLevel = " + pm25IndexLevel + ", pm25SourceDataDate = "
-                + pm25SourceDataDate + ", o3CalcDate = " + o3CalcDate + ", o3IndexLevel = " + o3IndexLevel
-                + ", o3SourceDataDate = " + o3SourceDataDate + ", stIndexStatus = " + stIndexStatus + ", stIndexCrParam = "
-                + stIndexCrParam + "}";
+        return "{\n\tid : " + id + ", \n\tstCalcDate : " + stCalcDate + ", \n\tstIndexLevel : " + stIndexLevel
+        + ", \n\tstSourceDataDate : " + stSourceDataDate + ", \n\tso2CalcDate : " + so2CalcDate + ", \n\tso2IndexLevel : "
+        + so2IndexLevel + ", \n\tso2SourceDataDate : " + so2SourceDataDate + ", \n\tno2CalcDate : " + no2CalcDate
+        + ", \n\tno2IndexLevel : " + no2IndexLevel + ", \n\tno2SourceDataDate : " + no2SourceDataDate + ", \n\tpm10CalcDate : "
+        + pm10CalcDate + ", \n\tpm10IndexLevel : " + pm10IndexLevel + ", \n\tpm10SourceDataDate : " + pm10SourceDataDate
+        + ", \n\tpm25CalcDate : " + pm25CalcDate + ", \n\tpm25IndexLevel : " + pm25IndexLevel + ", \n\tpm25SourceDataDate : "
+        + pm25SourceDataDate + ", \n\to3CalcDate : " + o3CalcDate + ", \n\to3IndexLevel : " + o3IndexLevel
+        + ", \n\to3SourceDataDate : " + o3SourceDataDate + ", \n\tstIndexStatus : " + stIndexStatus + ", \n\tstIndexCrParam : "
+        + stIndexCrParam + "\n}";
     }
+
+    
     
 }
