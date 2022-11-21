@@ -2,6 +2,8 @@ package org.example;
 
 public class Commune {
         private String communeName;
+        private String districtName;
+        private String provinceName;
 
         public String getCommuneName() {
                 return communeName;
@@ -27,6 +29,12 @@ public class Commune {
                 this.provinceName = provinceName;
         }
 
-        private String districtName;
-        private String provinceName;
+        
+        @Override
+        public String toString() {
+                return "Commune {communeName=" + communeName + ", districtName=" + districtName + ", provinceName="
+                                + provinceName + "}";
+        }
+
+        
 }

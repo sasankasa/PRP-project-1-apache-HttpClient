@@ -2,6 +2,12 @@ package org.example;
 
 public class Station {
     private int id;
+    private String stationName;
+    private String gegrLat;
+    private String gegrLon;
+    private City city;
+    private String addressStreet;
+    
 
     public int getId() {
         return id;
@@ -51,10 +57,15 @@ public class Station {
         this.addressStreet = addressStreet;
     }
 
-    private String stationName;
-    private String gegrLat;
-    private String gegrLon;
-    private City city;
-    private String addressStreet;
+    
+    @Override
+    public String toString() {
+        return "Station {id=" + id + ", stationName=" + stationName + ", gegrLat=" + gegrLat + ", gegrLon=" + gegrLon
+                + ", city=" + city + ", addressStreet=" + addressStreet + "}";
+    }
+
+    public String toSpecificString() {
+        return "Station {id = " + id + ", stationName = " + stationName + "}";
+    }
 
 }

@@ -2,6 +2,8 @@ package org.example;
 
 public class City {
     private int id;
+    private String name;
+    private Commune commune;
 
     public int getId() {
         return id;
@@ -27,6 +29,11 @@ public class City {
         this.commune = commune;
     }
 
-    private String name;
-    private Commune commune;
+    
+    @Override
+    public String toString() {
+        return "City {id=" + id + ", name=" + name + ", commune=" + commune + "}";
+    }
+
+    
 }
