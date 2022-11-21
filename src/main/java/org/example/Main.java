@@ -48,44 +48,19 @@ public class Main {
     }
 
     public static void createPdf(String index, String station) throws FileNotFoundException, DocumentException{
-        String file_path = index + ".pdf";
- 
-        // creating PdfWriter object
+        String file_path = "Station_" + index + ".pdf";
         PdfWriter pdf_writer = new PdfWriter(file_path);
- 
-        // Representing PdfDocument object
         PdfDocument pdf_doc = new PdfDocument(pdf_writer);
- 
-        // Creating a Document
-        // Instantiating a document object from pdf document
-        // object
         Document document = new Document(pdf_doc);
- 
-        // paragraph to be added
         String para = station;
- 
-              // Creating Paragraph object
         Paragraph paragraph_obj = new Paragraph(para);
- 
-        // Adding paragraphs to document
         document.add(paragraph_obj);
-       
-        // Closing the document
         document.close();
        
-        // final message
-        System.out.println("Finished writing contents to the file!");
+        System.out.println("Finished writing contents to the PDF file.");
     }
 
-    /*public static String scanId(){
-        
-        Scanner scan = new Scanner(System.in);
-        String stationIdString = scan.nextLine();
-        return stationIdString;
-    }*/
     public static void parameterizedGet() throws Exception{
-
-        //String stationIdString = scanId();
 
         Scanner scan = new Scanner(System.in);
         String stationIdString = scan.nextLine();
