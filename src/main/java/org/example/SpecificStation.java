@@ -2,7 +2,7 @@ package org.example;
 
 public class SpecificStation {
     private int id;
-    String stCalcDate;
+    private String stCalcDate;
     private StIndex stIndexLevel;
     private String stSourceDataDate;
     private String so2CalcDate;
@@ -161,7 +161,5 @@ public class SpecificStation {
         + ", \n\to3SourceDataDate : " + o3SourceDataDate + ", \n\tstIndexStatus : " + stIndexStatus + ", \n\tstIndexCrParam : "
         + stIndexCrParam + "\n}";
     }
-
-    
     
 }
