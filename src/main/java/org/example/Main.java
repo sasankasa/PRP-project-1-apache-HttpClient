@@ -25,6 +25,7 @@ public class Main {
 
     final static CloseableHttpClient httpClient = HttpClients.createDefault();
     public static void allStationsId() throws Exception{
+        
         HttpGet request = new HttpGet("https://api.gios.gov.pl/pjp-api/rest/station/findAll");
 
         CloseableHttpResponse response = httpClient.execute(request);
