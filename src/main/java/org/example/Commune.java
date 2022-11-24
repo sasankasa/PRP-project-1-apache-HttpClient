@@ -5,6 +5,8 @@ public class Commune {
         private String districtName;
         private String provinceName;
 
+        
+
         public String getCommuneName() {
                 return communeName;
         }

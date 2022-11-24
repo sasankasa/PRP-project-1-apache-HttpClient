@@ -31,7 +31,7 @@ public class Main {
         HttpEntity entity = response.getEntity();
 
         if(response.getStatusLine().getStatusCode() != 200){
-            System.out.println("Bad connetion " + response.getStatusLine().getStatusCode());
+            System.out.println("Bad connection " + response.getStatusLine().getStatusCode());
             return;
         }
 
@@ -39,25 +39,28 @@ public class Main {
         List<Station> stationList = new ArrayList<Station>();
         stationList = mapper.readValue(EntityUtils.toString(entity), new TypeReference<List<Station>>() {});
 
-        int i = 0;
-        for (Station station : stationList) {
-            i ++;
-            System.out.println(i + " " + station.toSpecificString());
-        }
-        
+        stationList.stream().map(data -> new StationPrint(data.getId(), data.getCity().getName())).forEach(System.out::println);
+
+
     }
 
     public static void createPdf(String index, String station) throws FileNotFoundException, DocumentException{
+        
         String file_path = "Station_" + index + ".pdf";
+
         PdfWriter pdf_writer = new PdfWriter(file_path);
         PdfDocument pdf_doc = new PdfDocument(pdf_writer);
         Document document = new Document(pdf_doc);
+
         String para = station;
+
         Paragraph paragraph_obj = new Paragraph(para);
+
         document.add(paragraph_obj);
         document.close();
        
-        System.out.println("Finished writing contents to the PDF file.");
+        String comunicate = String.format("Plik PDF stworzony - nazwa '%s'", file_path);
+        System.out.println(comunicate);
     }
 
     public static void parameterizedGet() throws Exception{
@@ -89,6 +92,8 @@ public class Main {
             parameterizedGet();
         } else {
             System.out.println(specstation.toString());
+
+            //System.out.println(specstation.getStIndexLevel().getIndexLevelName());
             createPdf(stationIdString, specstation.toString());
             
         }
@@ -103,6 +108,8 @@ public class Main {
         System.out.println("Podaj numer ID stacji, której pogodę chcesz zobaczyć: ");
 
         parameterizedGet();
+
+
         
     }
 }
